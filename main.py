@@ -41,7 +41,7 @@ app.layout = html.Div(
                              children=[
                                  html.H2('Salutations'),
                                  html.P('• KRI Interaction Analysis'),
-                                 html.P('• Combine KRI\'s to compare metrics'),
+                                 html.P('• Combine KRI\'s i.e. Music Volume + Plate Speed'),
                                  html.P('• Click + hold to zoom graph, Double Click to reset'),
                                  html.Div(
                                      className='div-for-dropdown',
@@ -84,8 +84,6 @@ def input_triggers_nested(value):
 def update_graph(selected_dropdown_value):
     trace1 = []
     df_sub = df
-
-    
     for stock in selected_dropdown_value:
         sine_wave = (np.sin(df_sub[stock])*-100)+ df_sub[stock].median()
         trace1.append(go.Scatter(x=df_sub.index,
@@ -120,7 +118,7 @@ def update_graph(selected_dropdown_value):
 def update_output(selected_dropdown_value):
     titles_desc = []
     for x in selected_dropdown_value:
-        titles_desc.append("•")
+        titles_desc.append("• ")
         titles_desc.append(x)
         
     return titles_desc
@@ -135,7 +133,7 @@ def update_p(selected_dropdown_value):
     descriptor = descriptions.test_print(paragraph_query[-1])
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
-    #app.run_server(debug=False, port=8080)
+    app.run_server(debug=True, port=8000)
  
-    app.run_server(debug=False,host='0.0.0.0', port=8080)
+    #app.run_server(debug=False,host='0.0.0.0', port=8080)
     
