@@ -14,10 +14,6 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import descriptions
 
-
-
-
-
 url = 'https://raw.githubusercontent.com/chefdarek/hotel-app/master/assets/hotel_metric.csv'
 df = pd.read_csv(url,index_col=0, parse_dates=True)
 
@@ -70,9 +66,6 @@ app.layout = html.Div(
                                  html.P(id="description-p"),
                                  html.Img(src=app.get_asset_url('livit.png'), style={'height':'30%','width':'100%', 'padding-top':'10px'})]),
                     ])])
-# 
-# 
-
 
 
 # Callback for timeseries price
@@ -133,7 +126,7 @@ def update_p(selected_dropdown_value):
     descriptor = descriptions.test_print(paragraph_query[-1])
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8000)
+    #app.run_server(debug=True, port=8000)
  
-    #app.run_server(debug=False,host='0.0.0.0', port=8080)
+    app.run_server(debug=False,host='0.0.0.0', port=8080)
     
