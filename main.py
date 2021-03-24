@@ -136,5 +136,5 @@ def update_p(selected_dropdown_value):
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
     #app.run_server(debug=False, port=8080)
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8080)
     
