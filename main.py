@@ -14,9 +14,7 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import descriptions
 
-# import firebase_admin
-import flask
-import requests
+
 
 
 
