@@ -133,7 +133,7 @@ def update_p(selected_dropdown_value):
     descriptor = descriptions.test_print(paragraph_query[-1])
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8000)
+    #app.run_server(debug=True, port=8000)
  
-    #app.run_server(debug=False,host='0.0.0.0', port=8080)
+    app.run_server(debug=False,host='0.0.0.0', port=8080)
     
