@@ -57,7 +57,7 @@ app.layout = html.Div(
                                 html.A(html.P('• ABOUT ME'),
                                 href='https://chefdarek.github.io/aboutme/'),
                                 html.A(html.P(' • RESUME'), 
-                                href='https://drive.google.com/file/d/11N5X-cCkJO1HTeP0R7VZn7kdSNhNKidn/view?usp=sharing'),
+                                href='https://drive.google.com/file/d/1NAaqzjFD7lkKSvV0cpKbvco8ttgSGpgm/view?usp=sharing'),
                                 html.Div(html.Img(src=app.get_asset_url('table.png'),style={'padding-left':'10%','height':'65%', 'width':'80%'}))]),
                     html.Div(id='graph',className='eight columns div-for-charts bg-grey',                                   
                              children=[
