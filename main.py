@@ -18,7 +18,7 @@ import descriptions
 
 
 
-url = 'https://raw.githubusercontent.com/chefdarek/hotel-app/master/hotel_metric.csv'
+url = 'https://raw.githubusercontent.com/chefdarek/hotel-app/master/assets/hotel_metric.csv'
 df = pd.read_csv(url,index_col=0, parse_dates=True)
 
 app = dash.Dash(__name__)
@@ -136,5 +136,6 @@ def update_p(selected_dropdown_value):
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
     #app.run_server(debug=False, port=8080)
+ 
     app.run_server(debug=False,host='0.0.0.0', port=8080)
     
