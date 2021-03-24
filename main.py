@@ -18,7 +18,7 @@ import descriptions
 
 
 
-url = 'https://raw.githubusercontent.com/chefdarek/darek-tidwell-hotel-metrics/main/assets/hotel_metric.csv'
+url = 'https://raw.githubusercontent.com/chefdarek/hotel-app/master/hotel_metric.csv'
 df = pd.read_csv(url,index_col=0, parse_dates=True)
 
 app = dash.Dash(__name__)
