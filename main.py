@@ -39,7 +39,7 @@ app.layout = html.Div(
                  children=[
                     html.Div(className='four columns div-user-controls',
                              children=[
-                                 html.H2('Salutations'),
+                                 html.H2('The Science of Service'),
                                  html.P('• KRI Interaction Analysis'),
                                  html.P('• Combine KRI\'s i.e. Music Volume + Plate Speed'),
                                  html.P('• Click + hold to zoom graph, Double Click to reset'),
@@ -133,7 +133,7 @@ def update_p(selected_dropdown_value):
     descriptor = descriptions.test_print(paragraph_query[-1])
     return paragraph_query[-1] + descriptor
 if __name__ == '__main__':
-    #app.run_server(debug=True, port=8000)
+    app.run_server(debug=True, port=8000)
  
-    app.run_server(debug=False,host='0.0.0.0', port=8080)
+    #app.run_server(debug=False,host='0.0.0.0', port=8080)
     
